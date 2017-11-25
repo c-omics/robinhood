@@ -21,4 +21,12 @@ Start the robinhood container, pointing the container to a prepared database ser
 docker run --name robinhood --link mariadb-for-robinhood:mysql -it -p 8080:80 -v /mnt/data:/work -e MYSQL_DB=robinhoodDB -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PWD=robinhood comics/robinhood:3.1
 ```
 
-If you are not pointing robinhood to an existing database, the create one named
+If you are not pointing robinhood to an existing database, the create one with the same name as that chosen for the ```MYSQL_DB``` env above.
+The mount-pont is the target filesystem, and must be a mount-point on the host. This container is expecting the filesystem to be mounted under ```/work```
+within the container.
+
+Start a scan with 
+
+```
+robinhood --scan
+```
