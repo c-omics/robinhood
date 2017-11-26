@@ -25,7 +25,7 @@ If you are not pointing robinhood to an existing database, the create one with t
 The mount-pont is the target filesystem, and must be a mount-point on the host. This container is expecting the filesystem to be mounted under ```/work```
 within the container.
 
-Start a scan with 
+Start a scan with:
 
 ```
 robinhood --scan
