@@ -15,7 +15,10 @@ host=localhost
 user=root
 password=password
 EOF
+
+chmod 600 /root/.my.cnf
 fi
+
 
 if [[ ! -z ${MYSQL_HOST} ]] ; then
   sed -i "s/\(host=\).*/\1$MYSQL_HOST/" /root/.my.cnf
