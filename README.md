@@ -33,7 +33,7 @@ within the container.
 Start a scan with:
 
 ```
-robinhood --scan --run=all -L /var/log/robinhood.log
+robinhood --scan --run=all -d
 ```
 
 The robinhood webgui is available on port 8080 from the host machine (```http://localhost:8080/robinhood/```).
