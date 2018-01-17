@@ -1,7 +1,7 @@
 # Robinhood Container Usage
 
 
-*This one's for the sysadmins, not the reseachers..*
+*This one's for the sysadmins, not the researchers...*
 
 
 
@@ -21,7 +21,7 @@ Start the robinhood container, pointing the container to a prepared database ser
 docker run --name robinhood --link mariadb-for-robinhood:mysql -it -p 8080:80 -v /mnt/data:/work:ro -e MYSQL_DB=robinhoodDB -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PWD=robinhood comics/robinhood:3.1
 ```
 
-If you are not pointing robinhood to an existing database, the create one with the same name as that chosen for the ```MYSQL_DB``` env above:
+If you are not pointing robinhood to an existing database, create one with the same name as that chosen for the ```MYSQL_DB``` env above:
 
 ```
 mysql -e "create database $MYSQL_DB"
